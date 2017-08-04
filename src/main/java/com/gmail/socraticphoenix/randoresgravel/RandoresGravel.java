@@ -32,6 +32,7 @@ import com.gmail.socraticphoenix.randores.component.enumerable.OreTypeGenerator;
 import com.gmail.socraticphoenix.randores.component.enumerable.OreTypeRegistry;
 import com.gmail.socraticphoenix.randores.component.post.MaterialDefinitionEditor;
 import com.gmail.socraticphoenix.randores.component.post.MaterialDefinitionEditorRegistry;
+import com.gmail.socraticphoenix.randores.item.RandoresItem;
 import com.gmail.socraticphoenix.randores.item.RandoresItemBlock;
 import com.gmail.socraticphoenix.randores.lib.collect.Items;
 import com.gmail.socraticphoenix.randores.plugin.AbstractRandoresPlugin;
