@@ -1,0 +1,10 @@
+[
+{
+  "modid": "randoresgravel",
+  "name": "Randores Gravel",
+  "description": "An addon for Randores.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "authorList": ["SocraticPhoenix"]
+}
+]
