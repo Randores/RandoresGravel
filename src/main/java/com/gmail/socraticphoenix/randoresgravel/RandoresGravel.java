@@ -40,6 +40,7 @@ import com.gmail.socraticphoenix.randores.plugin.RandoresAddon;
 import com.gmail.socraticphoenix.randores.plugin.RandoresAddonProvider;
 import com.gmail.socraticphoenix.randores.plugin.RandoresPlugin;
 import com.gmail.socraticphoenix.randores.probability.RandoresProbability;
+import com.gmail.socraticphoenix.randores.tab.RandoresTab;
 import com.gmail.socraticphoenix.randoresgravel.proxy.Proxy;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -91,7 +92,7 @@ public class RandoresGravel extends AbstractRandoresPlugin {
             RandoresOre gravelOre = new RandoresOre(Material.SAND, GRAVEL_ORE, type);
             gravelOre.setUnlocalizedName(type.getOreName() + "_gravel").setRegistryName("randoresgravel", type.getOreName() + "_gravel");
             ev.getRegistry().register(gravelOre);
-            RandoresItemRegistry.register(gravelOre);
+            RandoresItemRegistry.instance().register(gravelOre);
             ores.add(gravelOre);
         }
     }
@@ -103,6 +104,7 @@ public class RandoresGravel extends AbstractRandoresPlugin {
             MaterialType type = ore.getMaterialType();
             RandoresItemBlock itemBlock = new RandoresItemBlock(ore);
             itemBlock.setUnlocalizedName(type.getOreName() + "_gravel").setRegistryName("randoresgravel", type.getOreName() + "_gravel");
+            ev.getRegistry().register(itemBlock);
             itemBlocks.add(itemBlock);
         }
     }
@@ -130,7 +132,7 @@ public class RandoresGravel extends AbstractRandoresPlugin {
 
             @Override
             public boolean test(Random random) {
-                return RandoresProbability.percentChance(30, random);
+                return RandoresProbability.percentChance(60, random);
             }
 
             @Override

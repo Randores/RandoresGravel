@@ -31,8 +31,9 @@ repositories {
 }
 
 dependencies {
-    deobfProvided "com.gmail.socraticphoenix:Randores:${randoresVersion}:dev"
+    compileOnly "com.gmail.socraticphoenix:Randores:${randoresVersion}:dev"
     runtime "com.gmail.socraticphoenix:Randores:${randoresVersion}:shadow"
+
 }
 
 processResources {
