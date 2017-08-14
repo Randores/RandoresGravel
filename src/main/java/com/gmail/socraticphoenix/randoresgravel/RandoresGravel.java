@@ -43,6 +43,7 @@ import com.gmail.socraticphoenix.randores.probability.RandoresProbability;
 import com.gmail.socraticphoenix.randores.tab.RandoresTab;
 import com.gmail.socraticphoenix.randoresgravel.proxy.Proxy;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockFalling;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.init.Blocks;
@@ -64,7 +65,8 @@ import java.util.Random;
 @Mod(modid = "randoresgravel", dependencies = "required-after:randores")
 @RandoresAddon
 public class RandoresGravel extends AbstractRandoresPlugin {
-    public static final OreType GRAVEL_ORE = new OreType(w -> w.provider.getDimensionType() == DimensionType.NETHER || w.provider.getDimensionType() == DimensionType.OVERWORLD,
+    public static final OreType GRAVEL_ORE = new OreType(
+            w -> w.provider.getDimensionType() == DimensionType.NETHER || w.provider.getDimensionType() == DimensionType.OVERWORLD,
             "randoresgravel:gravel_ore",
             s -> s.getBlock() == Blocks.GRAVEL);
 
